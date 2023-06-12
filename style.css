@@ -6,6 +6,12 @@ body {
   box-sizing: border-box;
   background-color: whitesmoke;
 }
+nav {
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  color: whitesmoke;
+}
 
 nav img {
   height: 60px;
