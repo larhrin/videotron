@@ -5,16 +5,54 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: whitesmoke;
+  list-style: none;
 }
+
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   top: 0;
   position: sticky;
   z-index: 100;
   color: whitesmoke;
+  box-shadow: 5px 10px rgb(212, 211, 211);
+}
+
+nav .search input {
+  padding: 12px;
+}
+nav .nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+nav .nav-links .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+nav .nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+nav .nav-links ul li {
+  list-style: none;
+  font-size: 20px;
 }
 
 nav img {
   height: 60px;
+  width: 30%;
+  margin-right: 10px;
+}
+
+.main-1 {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .main {
@@ -40,7 +78,10 @@ li {
   flex: 0.5;
   padding: 20px;
 }
-
+#login-form {
+  border: 1px solid grey;
+  padding: 20px;
+}
 .main .right form {
   display: flex;
   flex-direction: column;
@@ -64,7 +105,15 @@ li {
   border-radius: 7px;
 }
 
-@media only screen and (max-width: 800px) {
+.low {
+  padding-left: 30px;
+}
+
+.under {
+  color: grey;
+}
+
+@media only screen and (max-width: 1000px) {
   .main {
     display: flex;
     flex-direction: column;
@@ -72,6 +121,15 @@ li {
   }
   .main .right {
     flex: 1;
-    width: 100%;
+    width: 800px;
+    margin: auto;
+  }
+
+  nav .nav-links .navigation {
+    display: none;
+  }
+
+  nav .search {
+    display: none;
   }
 }

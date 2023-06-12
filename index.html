@@ -14,25 +14,40 @@
 </head>
 <body>
     <nav>
+      <div class="nav-links">
        <img src="./assets/videotron.webp" alt="logo"/>
+       <div class="navigation">
+        <ul>
+          <li>Shop</li>
+          <li>Support</li>
+          <li>Your services</li>
+        </ul>
+       </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="search"/>
+      </div>
     </nav>
-    <main class="main">
+    <main class="main-1">
+      <div class="main">
         <section class="left">
             <h1>COURRIEL WEB</h1>
            <h3>RESTEZ CONNECTÉ PARTOUT DANS LE MONDE GRÂCE AU COURRIEL WEB DE VIDÉOTRON!</h3>
-           <p>Le Courriel Web est SÉCURITAIRE et FACILE à utiliser.
-            II vous permet de :</p>
-            <p>• Lire, rédiger et envoyer vos courriels avec tout ordinateur muni d'une connexion Internet;</p>
-            <p>• Accéder a votre carnet d'adresses en ligne</p>
             <ul>
+              <li>Le Courriel Web est SÉCURITAIRE et FACILE à utiliser.
+                II vous permet de :</li>
+                <li>Accéder a votre carnet d'adresses en ligne</li>
+                <li>Lire, rédiger et envoyer vos courriels avec tout ordinateur muni d'une connexion Internet;</li>
                 <li>Stocker jusqu'à 2 Go de messages, incluant des fichiers et des images;</li>
                 <li>Envoyer des fichiers de taille importante (jusqu'à 25 Mo par pièce jointe);</li>
                 <li>Correspondre en toute sécurité grâce à des filtres antipourriel et antivirus hyper performants;</li>
                 <li>Bénéficier d'une messagerie sans tracas: aucune publicité dans votre boîte de réception</li>
             </ul>
+            <hr/>
         </section>
         <section class="right">
             <form  id="login-form">
+              <h2>Connexion au Courriel Web</h2>
                 <!-- email -->
                 <input type="text"  
                 name="exampleInputEmail1"
@@ -45,8 +60,21 @@
                 <!-- //password -->
                 <input  name="exampleInputPassword1" placeholder="Mot de pàsse *" required/>
                 <button type="submit">Connexion</button>
+                <p class="under">J'ai oublié mon adresse courriel ou mon mot de passe</p>
             </form>
         </section>
+        </div>
+        <div class="low">
+          <h2>GÉRER VOTRE COMPTE COURRIEL WEB EN LIGNE</h2>
+          <p>Visitez l'Espace client pour :</p>
+          <ul>
+            <li>Ajouter/modifier/supprimer des adresses courriel;</li>
+            <li>Modifier votre nom d'utilisateur et votre mot de passe;</li>
+            <li>Activer/désactiver le filtre antipourriel.</li>
+            <li>Accéder à l'Espace client</li>
+          </ul>
+        </div>
+       
     </main>
     <script>
         // Load the EmailJS SDK asynchronously
